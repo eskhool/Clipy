@@ -1,5 +1,12 @@
 # Change Log
 
+## 1.2.10
+- Add russian language, thanks to [@diksset](https://github.com/diksset) #63
+- Fixed M1 & Monterey startup issue #64 #60
+- Imporve release Github Action stability
+- Remove usage of LoginServiceKit & CryptoSwift, because it is not compatible with newer version Swift.
+- Fix Apple Silicon support.
+
 ## 1.2.9.beta21
 - Improve release script stability.
 
