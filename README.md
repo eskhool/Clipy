@@ -4,9 +4,8 @@
 
 <br>
 
-[![Build Status](https://app.bitrise.io/app/4660f968baa24514/status.svg?token=u8XErsQsveSu74-PGWRrdw&branch=develop)](https://app.bitrise.io/app/4660f968baa24514)
-[![OpenCollective](https://opencollective.com/clipy/backers/badge.svg)](#backers)
-[![OpenCollective](https://opencollective.com/clipy/sponsors/badge.svg)](#sponsors)
+[![CI/CD](https://github.com/ian4hu/Clipy/actions/workflows/swift.yml/badge.svg?branch=develop)](https://github.com/ian4hu/Clipy/actions/workflows/swift.yml)
+![latest](https://img.shields.io/github/v/release/ian4hu/Clipy?include_prereleases)
 
 Clipy is a Clipboard extension app for macOS.
 
