@@ -1,5 +1,8 @@
 # Change Log
 
+## 1.2.11
+- Add russian language, thanks to [@diksset](https://github.com/diksset) #63
+
 ## 1.2.10
 - Add russian language, thanks to [@diksset](https://github.com/diksset) #63
 - Fixed M1 & Monterey startup issue #64 #60
