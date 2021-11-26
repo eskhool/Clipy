@@ -151,7 +151,6 @@ private extension MenuService {
             reorderClipsAfterPasting,
             closeSnippetEditor
         )
-            //.skip(1)
             .debounce(.seconds(1), scheduler: MainScheduler.instance)
             .asDriver(onErrorDriveWith: .empty())
             .drive(onNext: { [weak self] in

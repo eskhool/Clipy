@@ -38,7 +38,7 @@ final class CPYClipData: NSObject {
         if lazyHash != nil {
             return lazyHash!
         }
-        
+
         var digest = 0
 
         types.forEach { digest = $0.rawValue.continueHash(hash: digest) }
@@ -56,22 +56,17 @@ final class CPYClipData: NSObject {
         let type = primaryType ?? AvailableType.string.primaryPbType
         // try hash image that cover some pdf
         if let imageHash = image?.tiffRepresentation {
-            //hash ^= imageHash.hashValue
             digest = imageHash.continueHash(hash: digest)
         } else if let imageRep = image?.representations.first {
-            //hash ^= imageRep.hashValue
             digest = imageRep.archive().continueHash(hash: digest)
         } else if (type.isRTF || type.isRTFD) && RTFData != nil {
             // RTF data should be parsed the get the hash
             if let attr = NSAttributedString(rtfd: RTFData!, documentAttributes: nil) ?? NSAttributedString(rtf: RTFData!, documentAttributes: nil) {
-                //hash ^= "\(attr)".removePtr().hashValue
                 digest = "\(attr)".removePtr().continueHash(hash: digest)
             } else {
-                //hash ^= RTFData!.hashValue
                 digest = RTFData!.continueHash(hash: digest)
             }
         } else if type.isPDF && PDF != nil {
-            //hash ^= PDF!.count
             digest = PDF!.continueHash(hash: digest)
         }
         lazyHash = digest

@@ -461,7 +461,7 @@ extension CPYSnippetsEditorWindowController: NSTextViewDelegate {
 
 // MARK: - RecordView Delegate
 extension CPYSnippetsEditorWindowController: RecordViewDelegate {
-    
+
     func recordViewShouldBeginRecording(_ recordView: RecordView) -> Bool {
         guard selectedFolder != nil else { return false }
         return true
