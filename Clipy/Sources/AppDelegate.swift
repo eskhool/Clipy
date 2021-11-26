@@ -15,12 +15,12 @@ import Sparkle
 import RxCocoa
 import RxSwift
 import RxOptional
-import LoginServiceKit
 import Magnet
 import Screeen
 import RxScreeen
 import RealmSwift
 import LetsMove
+import ServiceManagement
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSMenuItemValidation {
@@ -152,10 +152,10 @@ class AppDelegate: NSObject, NSMenuItemValidation {
     }
 
     private func toggleAddingToLoginItems(_ isEnable: Bool) {
-        let appPath = Bundle.main.bundlePath
-        LoginServiceKit.removeLoginItems(at: appPath)
+        let appBundleID = Bundle.main.bundleIdentifier! as CFString
+        SMLoginItemSetEnabled(appBundleID, false)
         guard isEnable else { return }
-        LoginServiceKit.addLoginItems(at: appPath)
+        SMLoginItemSetEnabled(appBundleID, true)
     }
 
     private func reflectLoginItemState() {

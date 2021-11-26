@@ -19,4 +19,19 @@ extension String {
 
         return String(self[startIndex..<endIndex])
     }
+
+    func continueHash(hash: Int = 0) -> Int {
+        var result = UInt64(truncatingIfNeeded: hash)
+        let buf = [UInt8](self.utf8)
+        for bit in buf {
+            result = result &* 31 &+ UInt64(bit)
+        }
+        return Int(truncatingIfNeeded: result)
+    }
+}
+
+extension Data {
+    func continueHash(hash: Int) -> Int {
+        return base64EncodedString().continueHash(hash: hash)
+    }
 }
