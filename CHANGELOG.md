@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.2.9.beta20
+- Fix M1 startup issues.
+- Remove usage of LoginServiceKit & CryptoSwift.
+- Fix auto release Github Action.
+
+## 1.2.9.beta19
+- A test release for M1
+
 ## 1.2.9.beta18
 - Fixes Sparkle update issues.
 
