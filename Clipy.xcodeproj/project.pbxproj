@@ -147,6 +147,8 @@
 		31ACA9F71EC5B85C00BD34C0 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/CPYUpdatesPreferenceViewController.strings; sourceTree = "<group>"; };
 		31ACA9F81EC5B85C00BD34C0 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/CPYSnippetsEditorWindowController.strings; sourceTree = "<group>"; };
 		31ACA9F91EC5B85C00BD34C0 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3CE7109E2750C79800A8A29A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3CE7109F2750C8A400A8A29A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3CF0ACD1231172BF0097CB68 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/CPYPreferencesWindowController.strings; sourceTree = "<group>"; };
 		3CF0ACD2231172C00097CB68 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/CPYBetaPreferenceViewController.strings; sourceTree = "<group>"; };
 		3CF0ACD3231172C00097CB68 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/CPYExcludeAppPreferenceViewController.strings; sourceTree = "<group>"; };
@@ -694,6 +696,7 @@
 				"zh-Hans",
 				pl,
 				es,
+				ru,
 			);
 			mainGroup = FAC43DBD1B35D8B100C06102;
 			packageReferences = (
@@ -948,6 +951,8 @@
 				8460049F1FD5511A00BA733E /* de */,
 				54ADE1032008F64100239852 /* zh-Hans */,
 				5BA49A8E231018590002EDBA /* pl */,
+				3CE7109E2750C79800A8A29A /* es */,
+				3CE7109F2750C8A400A8A29A /* ru */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
