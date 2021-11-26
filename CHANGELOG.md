@@ -1,5 +1,8 @@
 # Change Log
 
+## 1.2.9.beta21
+- Improve release script stability.
+
 ## 1.2.9.beta20
 - Fix M1 startup issues.
 - Remove usage of LoginServiceKit & CryptoSwift.
