@@ -31,7 +31,7 @@ jobs:
     - name: Build
       run: bash .travis/build.sh
       env:
-        CS_ID: "Apple Developmen"
+        CS_ID: "Apple Development"
         CS_TEAM: "V299WZCD66"
     - name: Prepare Delta
       run: bash .travis/prepare_delta.sh
