@@ -23,8 +23,16 @@ jobs:
     - name: Use release tag as version
       if: startsWith(github.ref, 'refs/tags')
       run: bash .travis/release-a-version.sh
+    - name: Setup certificates
+      uses: apple-actions/import-codesign-certs@v1
+      with:
+        p12-file-base64: ${{ secrets.CERTIFICATES_P12 }}
+        p12-password: ${{ secrets.CERTIFICATES_P12_PASSWORD }}
     - name: Build
       run: bash .travis/build.sh
+      env:
+        CS_ID: "Apple Developmen"
+        CS_TEAM: "V299WZCD66"
     - name: Prepare Delta
       run: bash .travis/prepare_delta.sh
     - name: Sparkle
