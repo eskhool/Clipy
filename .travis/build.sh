@@ -3,7 +3,11 @@
 
 xcodebuild -resolvePackageDependencies -workspace Clipy.xcworkspace -scheme Clipy -configuration Release -clonedSourcePackagesDirPath SourcePackages
 
-set -o pipefail && xcodebuild -workspace Clipy.xcworkspace -scheme Clipy -configuration Release -clonedSourcePackagesDirPath SourcePackages -destination 'generic/platform=macOS' -archivePath Clipy.xcarchive CODE_SIGN_IDENTITY="${CS_ID}" DEVELOPMENT_TEAM="${CS_TEAM}" clean archive | xcpretty
+set -o pipefail && xcodebuild -workspace Clipy.xcworkspace -scheme Clipy -configuration Release -clonedSourcePackagesDirPath SourcePackages -destination 'generic/platform=macOS' -archivePath Clipy.xcarchive CODE_SIGN_IDENTITY="" DEVELOPMENT_TEAM="" clean archive | xcpretty
+
+if [[ -n "${CS_ID}" ]]; then
+  codesign -f --deep -v -s "${CS_TEAM}" --keychain signing_temp.keychain Clipy.xcarchive/Products/Applications/Clipy.app
+fi
 
 # Clean up
 rm -rf Clipy.app* || true
